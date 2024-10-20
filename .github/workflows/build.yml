@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      ESLINT_USE_FLAT_CONFIG: "False"
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
