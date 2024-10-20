@@ -22,4 +22,4 @@ jobs:
       - name: Run ESLint
         run: |
           export ESLINT_USE_FLAT_CONFIG=false
-          yarn lint
+          yarn lint --fix
