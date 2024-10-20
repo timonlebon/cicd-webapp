@@ -23,3 +23,11 @@ jobs:
         run: |
           export ESLINT_USE_FLAT_CONFIG=false
           yarn lint --fix
+
+      - name: Build Docker Image
+        uses: docker/build-push-action@v4
+        with:
+          context: .            
+          file: ./Dockerfile     # Path to the Dockerfile in the root of your project
+          tags: timon13/webapp:latest  # Tag for the Docker image
+          push: false
