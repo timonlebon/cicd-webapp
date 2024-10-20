@@ -7,8 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      ESLINT_USE_FLAT_CONFIG: "False"
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
@@ -22,4 +20,6 @@ jobs:
         run: yarn install
 
       - name: Run ESLint
-        run: yarn lint
+        run: |
+          export ESLINT_USE_FLAT_CONFIG=false
+          yarn lint
