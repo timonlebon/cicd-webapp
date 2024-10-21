@@ -20,9 +20,9 @@ jobs:
         run: yarn install
 
       - name: Run ESLint
-        run: |
-          export ESLINT_USE_FLAT_CONFIG=false
-          yarn lint --fix
+        env: 
+          ESLINT_USE_FLAT_CONFIG: false
+        run: yarn lint --fix
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
