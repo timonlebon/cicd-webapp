@@ -34,6 +34,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .            
-          file: ./dockerfile     # Path to the Dockerfile in the root of your project
-          tags: timon13/webapp:latest  # Tag for the Docker image
+          file: ./dockerfile
+          tags: timon13/webapp:latest
           push: true
